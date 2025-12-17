@@ -153,6 +153,17 @@ Convergence status and runtime
 Generated counterfactual images saved to the results/ directory
 Plots illustrating optimization convergence
 
+📥 Download Pretrained Model Weights
+- This project requires a pretrained ResNet-50 model fine-tuned on the CUB-200-2011 dataset.
+ 🔹 Required File
+- Filename: best_resnet50_cub200.pth
+ 🔹 Download Link
+- Download the pretrained weights from the following link:
+ 👉 Pretrained Model (Google Drive) : https://drive.google.com/file/d/1BUUTyPPdpCQLlrL6CkQq7Ym6FsSe-jaf/view?usp=sharing
+- After downloading, place the model file in the following directory:
+  weights/
+  └── best_resnet50_cub200.pth
+  
 ## 🧪 Notes on Reproducibility
 -The project was tested on a local machine using Anaconda
 -Optimization is performed in feature space (2048 dimensions)
@@ -161,13 +172,16 @@ Plots illustrating optimization convergence
 
 ## 📁 Repository Structure
 Optimization-Counterfactuals/
+├──img/
+    └── Blue_Jay_0083_61492
 ├── main.py              # Augmented Lagrangian method
 ├── main_adam.py         # Adam-based penalty method
 ├── models/              # CNN backbone
 ├── utils/               # Optimization utilities
 ├── results/             # Generated counterfactuals & plots
 ├── IMSE505_Report.pdf   # Full technical report
-
+├──weights/
+    └── best_resnet50_cub200.pth
 ## 📚 What I Learned
 -How to translate theoretical optimization concepts into working ML systems
 -How CNN decision boundaries behave in high-dimensional feature spaces
